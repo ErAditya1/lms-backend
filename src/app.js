@@ -14,7 +14,9 @@ global.onlineUsers = new Map();
 const io = new Server(httpServer, {
   // pingTimeout: 60000,
   cors: {
-    origin: process.env.CORS_ORIGIN,
+    origin: process.env.CORS_ORIGIN === "*"
+    ? "*" // This might give CORS error for some origins due to credentials set to true
+    : process.env.CORS_ORIGIN?.split(","),
     // origin:"*:*",
     credentials: true,
   },
