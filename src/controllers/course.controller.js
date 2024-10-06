@@ -9,8 +9,8 @@ import {
   uploadOnCloudinary,
 } from "../utils/cloudinary.js";
 import { Video } from "../models/video.model.js";
-import next from "next";
-import { channel } from "diagnostics_channel";
+
+
 
 const addCourse = asyncHandler(async (req, res) => {
   const author = req.user._id;
