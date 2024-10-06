@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import { number } from "zod";
+
 const courseSchema = new Schema(
   {
    
