@@ -64,8 +64,9 @@ export const sendResetEmail = async ({
   username,
   resetToken,
 }) => {
+
   try {
-    const resetUrl = `http://localhost:3000/reset-password?token=${resetToken}`;
+    const resetUrl = `${process.env.CLIENT}/reset-password?token=${resetToken}`;
     const mailOptions = {
       from: " adityakumar41190@gmail.com", // sender address
       to: email, // list of receivers
